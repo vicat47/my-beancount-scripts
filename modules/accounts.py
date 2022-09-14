@@ -40,8 +40,7 @@ accounts = {
 
 descriptions = {
     #'滴滴打车|滴滴快车': get_didi,
-    '余额宝.*收益发放': 'Assets:Company:Alipay:MonetaryFund',
-    '转入到余利宝': 'Assets:Bank:MyBank',
+    '余额宝.*收益发放': 'Assets:Cash:Alipay',
     '花呗收钱服务费': 'Expenses:Fee',
     '自动还款-花呗.*账单': 'Liabilities:Company:Huabei',
     '信用卡自动还款|信用卡还款': get_credit_return,
@@ -61,10 +60,11 @@ anothers = {
     '麦当劳': get_eating_account,
     '五爷拌面': get_eating_account,
     '济南高新区大碗聚手擀面馆': get_eating_account,
+    '必胜宅急送': get_eating_account,
 }
 
 incomes = {
-    '余额宝.*收益发放': 'Income:Trade:PnL',
+    '余额宝.*收益发放': 'Income:Interest:YuEBao',
 }
 
 description_res = dict([(key, re.compile(key)) for key in descriptions])
