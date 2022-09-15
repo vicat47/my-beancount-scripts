@@ -101,6 +101,11 @@ class AlipayProve(Base):
                         entry, account, None, None)
                     data.create_simple_posting(
                         entry, trade_account, '-' + amount_string, 'CNY')
+                elif ('蚂蚁财富' in row['交易对方'] and '买入' in row['商品说明'] and status == '付款成功，份额确认中'):
+                    data.create_simple_posting(
+                        entry, account, None, None)
+                    data.create_simple_posting(
+                        entry, trade_account, '-' + amount_string, 'CNY')
                 elif (  status == '退款成功' or
                       ('蚂蚁财富' in row['交易对方']    and status == '交易成功') or
                       ('红包' == trade_account_original and status == '交易成功') or

@@ -61,6 +61,7 @@ anothers = {
     '五爷拌面': get_eating_account,
     '济南高新区大碗聚手擀面馆': get_eating_account,
     '必胜宅急送': get_eating_account,
+    'luckincoffee': 'Expenses:Meal:CasualDrink',
 }
 
 incomes = {
